@@ -1,0 +1,159 @@
+/* using rem unit */
+html {
+  font-size: 62.5%;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Traversing exercise */
+.model {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s linear;
+}
+.model.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.model-content {
+  max-width: 600px;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: #fff;
+  position: relative;
+}
+.model-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #999;
+}
+.model-desc {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+.model-action {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 20px;
+}
+.model-submit,
+.model-cancel {
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #999;
+}
+.model-submit {
+  background-color: #3d6ef7;
+  color: white;
+}
+
+/* Notification exercise */
+.noti {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  max-width: 400px;
+  height: 130px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+  display: flex;
+  transform: translateY(150%);
+  animation: noti 4s forwards 1 linear;
+}
+@keyframes noti {
+    20%,
+    80%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(150%);
+    }
+}
+.noti-img {
+  width: 30%;
+  flex-shrink: 0;
+  border-radius: inherit;
+  object-fit: cover;
+}
+.noti-content{
+    padding: 15px;
+    flex: 1 1 0;
+}
+.noti-title{
+    margin-bottom: 15px;
+}
+.noti-desc{
+    line-height: 1.5;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Sth example */
+.boxed{
+  width: 200px;
+  height: 300px;
+  padding: 20px;
+  border: 5px solid;
+  margin-left: 50px;
+  border-top: 20px solid;
+}
+.button{
+  width: 300px;
+  background-color: #ffa400;
+  font-family: "Poppins", sans-serif;
+  display: block;
+  margin: 50px auto;
+  padding: 20px;
+  border: 0;
+  color: white;
+}
+
+.input{
+  padding: 15px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  width: 300px;
+  margin: 50px auto;
+  display: block;
+}

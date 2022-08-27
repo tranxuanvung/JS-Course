@@ -1,12 +1,12 @@
 // 1. DOM là gì ?
 // - Viết tắt: Document object model
-// - DOM node: các thẻ html
+// - DOM Node: Mọi thành phần tạo nên Dom Tree đều được gọi là 1 node (các thẻ html, textNodes, commentNodes, ...)
 // - DOM attribute: thuộc tính của các thẻ html
 
-// 2. Selecting node: truy vấn các thẻ html tương ứng với các selectors
-// --2.1. document.querySelector("selector") -> nó sẽ trả về 1 DOM node nếu tồn tại và ngược lại nó sẽ trả về null
-// -selectors trong css là những cái như: .container, p, #spinner, html, body
-// -nếu có nhiều selectors giống nhau thì nó sẽ trả về cái đầu tiên nó tìm được thôi
+// 2. Selecting node: truy vấn các node tương ứng với các selectors
+// --2.1. document.querySelector("selector") -> nó sẽ trả về 1 node nếu tồn tại và ngược lại nó sẽ trả về null
+// - selectors trong css là những cái như: .container, p, #spinner, html, body
+// - nếu có nhiều selectors giống nhau thì nó sẽ trả về cái đầu tiên nó tìm được thôi
 const singleNode1 = document.querySelector("h2");
 const singleNode2 = document.querySelector(".container");
 const singleNode3 = document.querySelector("#spinner");
@@ -16,14 +16,14 @@ console.log(singleNode2);
 console.log(singleNode3);
 console.log(singleNode4);
 
-//--2.1 document.querySelectorAll("selector") -> Trả về 1 NodeList (là 1 mảng nhưng không phải mảng) chứa danh sách các node nếu tồn tại, ngược lại nó sẽ trả về empty (NodeList rỗng)
-//- NodeList giống mảng ở chỗ là nó có thể loop qua mảng được(chỉ forEach và vòng lặp thôi nha) còn khác ở chỗ là không dùng được những phương thức của mảng như pop, push, ...
+//--2.1 document.querySelectorAll("selector") -> Trả về 1 NodeList (là 1 mảng nhưng không phải mảng) chứa danh sách các node nếu tồn tại, ngược lại nó sẽ trả về empty (NodeList rỗng) (Tìm hiểu thêm về NodeList ở phần traversing)
+//- NodeList giống mảng ở chỗ là nó có thể loop qua mảng được(chỉ forEach và vòng lặp thôi nha) còn khác ở chỗ là không dùng được những phương thức của mảng như pop, push, map, filter, ...
 const multiNodes = document.querySelectorAll(".item");
 console.log(multiNodes);
 //- ứng dụng: dùng để duyệt các selectors :)))
 
 //--2.3 document.getElementsByClassName("className") (className không có dấu chấm như selector nha)
-//- Kết quả nó trả về là một HTMLCollection (giống các đặc điểm của NodeList bên trên, sự khác nhau chúng ta sẽ bàn đền sau) chứa danh sách các node
+//- Kết quả nó trả về là một HTMLCollection (giống các đặc điểm của NodeList bên trên, sự khác nhau chúng ta sẽ bàn đền sau) chứa danh sách các element
 const classNodes = document.getElementsByClassName("item");
 console.log(classNodes);
 //- Người ta hay sử dùng 2 cái trên hơn là cái này hí hí

@@ -1,4 +1,4 @@
-// 1. selector.getAttribute("attribute") -> lấy ra giá trị của attribute
+// 1. selector.getAttribute("attribute") -> lấy ra giá trị của attribute của selector
 // selector ở đây là 1 node chứ không phải 1 node list
 // - Attribute (thuộc tính) là tất cả những thứ trong 1 tag (href, src, id, class, style, ...)
 const link = document.querySelector(".link");
